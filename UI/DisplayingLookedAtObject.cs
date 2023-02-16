@@ -13,25 +13,23 @@ public class DisplayingLookedAtObject : MonoBehaviour
     /// when holding tab, it will also include an additional information
     /// </summary>
 
-    //mask aka what should be displayed?
-    
+
+    //what should be displayed
     public LayerMask mask;
 
-    //ui things
+    //for the player 
+    public PlayerProperties player;
 
+    //actual ui things
     public Canvas canvas;
     public Text ItemUIText;
 
-    //how close should the player be in order to be displayed?
-    public int Radius;
-
-
-    // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out var hit, Radius, mask))
+        if (Physics.Raycast(transform.position, transform.forward, out var hit, player.Radius, mask))
         { //if the player is close enough, enable the canvas, and change the text
             canvas.enabled = true;
+
 
             var obj = hit.collider.gameObject;
 
@@ -41,8 +39,9 @@ public class DisplayingLookedAtObject : MonoBehaviour
             return;
         }
 
-        else if (!Physics.Raycast(transform.position, transform.forward, out var hitting, Radius, mask) && canvas.enabled)
+        else if (!Physics.Raycast(transform.position, transform.forward, out var hitting, player.Radius, mask) && canvas.enabled)
         { //if the canvas is enabled, and the player is not looking at anything, disable the canvas
+
             canvas.enabled = false;
             return;
         }
