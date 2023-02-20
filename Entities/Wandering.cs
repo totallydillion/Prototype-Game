@@ -12,6 +12,7 @@ public class Wandering : MonoBehaviour
     {
         properties = gameObject.GetComponent<EntityProperties>();
 
+        if(properties.wander)
         StartCoroutine(StartWandering());
     }
 
@@ -19,7 +20,7 @@ public class Wandering : MonoBehaviour
     {
 
         //if the entity is not wandering, start the wandering process
-        if (!isWandering)
+        if (!isWandering && properties.wander)
             StartCoroutine(StartWandering());
 
         // if the entity is supposed to be walking, walk
