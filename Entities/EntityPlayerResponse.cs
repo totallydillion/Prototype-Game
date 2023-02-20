@@ -26,9 +26,9 @@ public class EntityPlayerResponse : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Vector3.Distance(transform.position, PlayerObject.transform.position) <= properties.radius)
-        {
-            transform.LookAt(PlayerObject);
-        }
+      //  if(Vector3.Distance(transform.position, PlayerObject.transform.position) <= properties.radius)
+      //  {
+      //      transform.LookAt(PlayerObject);
+      //  }
     }
 }
