@@ -13,6 +13,14 @@ public class PlayerProperties : MonoBehaviour
     //not for showing
     public int Radius; // how far can the player see
 
+    //inventory
+    public GameObject LeftHand;
+    public GameObject RightHand;
+
+    //backpack
+    public bool hasBackpack;
+    public int backpackSlots;
+
     //stats
     public int attackSpeed;
     public int attackPower;
