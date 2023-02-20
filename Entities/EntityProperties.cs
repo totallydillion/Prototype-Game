@@ -28,9 +28,10 @@ public class EntityProperties : MonoBehaviour
     //how fast is the entity?
     public int speed;
 
+    //how fast does the entity rotate?
+    public int rotationSpeed;
+
     //how hard does the entity attack?
     public int attack;
-
-
 
 }
