@@ -34,7 +34,10 @@ public class DisplayingLookedAtObject : MonoBehaviour
             var obj = hit.collider.gameObject;
 
             ObjectProperties properties = obj.GetComponent<ObjectProperties>();
-
+            
+            if (!properties)
+                return;
+                
             ItemUIText.text = properties.Name;
             return;
         }
