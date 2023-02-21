@@ -34,4 +34,6 @@ public class EntityProperties : MonoBehaviour
     //how hard does the entity attack?
     public int attack;
 
+    //drops
+    public GameObject[] drops;
 }
