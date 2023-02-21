@@ -36,7 +36,7 @@ public class DisplayingLookedAtObject : MonoBehaviour
             ObjectProperties properties = obj.GetComponent<ObjectProperties>();
             
             if (!properties)
-                return;
+                canvas.enabled = false;
                 
             ItemUIText.text = properties.Name;
             return;
