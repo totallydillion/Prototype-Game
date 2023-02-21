@@ -23,6 +23,7 @@ public class DisplayingLookedAtObject : MonoBehaviour
     //actual ui things
     public Canvas canvas;
     public Text ItemUIText;
+    public Image ObjectHealthDisplay;
 
     void Update()
     {
@@ -34,10 +35,14 @@ public class DisplayingLookedAtObject : MonoBehaviour
             var obj = hit.collider.gameObject;
 
             ObjectProperties properties = obj.GetComponent<ObjectProperties>();
-            
+
             if (!properties)
                 canvas.enabled = false;
-                
+
+            //update the health UI
+            ObjectHealthDisplay.fillAmount = (properties.currentHealth / properties.startingHealth);
+
+
             ItemUIText.text = properties.Name;
             return;
         }
