@@ -29,11 +29,11 @@ public class Wandering : MonoBehaviour
 
         //is the entity turning left?
         if (isRotatingLeft)
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * -properties.rotationSpeed);
+            transform.Rotate(new Vector3(0, Random.Range(0, 90), 0) * Time.deltaTime * -properties.rotationSpeed);
 
         //is the entity turning right ?
         else if (isRotatingRight)
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * properties.rotationSpeed);
+            transform.Rotate(new Vector3(0, Random.Range(0, 90), 0) * Time.deltaTime * properties.rotationSpeed);
     }
 
 
