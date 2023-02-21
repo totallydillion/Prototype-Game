@@ -18,8 +18,8 @@ public class ObjectProperties : MonoBehaviour
     public Sprite Icon; // icon that is used for inventory
     public int StackAmount; // how many can be held at once
 
-    public int startingHealth; //the starting amount of health that an item has
-    public int currentHealth; //the current health that the item has, when reaches zero, the item should* be destroyed
+    public float startingHealth; //the starting amount of health that an item has
+    public float currentHealth; //the current health that the item has, when reaches zero, the item should* be destroyed
 
     public GameObject[] drops; // what does the object drop on destroy?
 }
