@@ -20,4 +20,6 @@ public class ObjectProperties : MonoBehaviour
 
     public int startingHealth; //the starting amount of health that an item has
     public int currentHealth; //the current health that the item has, when reaches zero, the item should* be destroyed
+
+    public GameObject[] drops; // what does the object drop on destroy?
 }
